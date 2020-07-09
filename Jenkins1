@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+   
+    stages{
+        stage('Build'){
+            steps{
+                 archiveArtifacts artifacts: '*.war', onlyIfSuccessful: true
+            }
+        }
+        stage("upload war to Nexus")
+		{
+		  steps{
+		  
+		  nexusArtifactUploader artifacts: [[
+		  
+		  artifactId: 'simpla-app', 
+		  classifier: '', 
+		  file: 'simple-app-1.0.war', 
+		  type: 'war']], 
+		  credentialsId: 'nexus3', 
+		  groupId: 'in.javahome',
+		  nexusUrl: '10.118.44.73:8091',
+		  nexusVersion: 'nexus3', 
+		  protocol: 'http', 
+		  repository: 'demo',
+		  version: '1.0'
+		    	 }
+		}
+        }
+    }
+
