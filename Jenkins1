@@ -2,11 +2,7 @@ pipeline {
     agent any
    
     stages{
-        stage('Build'){
-            steps{
-                 archiveArtifacts artifacts: '*.war', onlyIfSuccessful: true
-            }
-        }
+        
         stage("upload war to Nexus")
 		{
 		  steps{
