@@ -2,7 +2,15 @@ pipeline {
     agent any
    
     stages{
-        
+        stage("checkout code")
+		{
+		steps
+		{
+		
+		git 'https://github.com/sravankumar-n/game-of-life.git'
+		
+		}
+		}
         stage("upload war to Nexus")
 		{
 		  steps{
