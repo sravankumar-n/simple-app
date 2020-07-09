@@ -21,7 +21,7 @@ pipeline {
 		  classifier: '', 
 		  file: 'simpla-app-1.0.war', 
 		  type: 'war']], 
-		  credentialsId: 'nexus3', 
+		  credentialsId: '1e024fbe-7f99-4370-a493-a2766cfbd8ce', 
 		  groupId: 'in.javahome',
 		  nexusUrl: '10.118.44.73:8091',
 		  nexusVersion: 'nexus3', 
