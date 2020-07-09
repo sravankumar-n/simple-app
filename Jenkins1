@@ -19,7 +19,7 @@ pipeline {
 		  
 		  artifactId: 'simpla-app', 
 		  classifier: '', 
-		  file: 'simple-app-1.0.war', 
+		  file: 'simpla-app-1.0.war', 
 		  type: 'war']], 
 		  credentialsId: 'nexus3', 
 		  groupId: 'in.javahome',
